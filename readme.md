@@ -9,5 +9,5 @@ npm run biuld
 
 ### 运行
 ```
-npm run product
+npm run prod
 ```
