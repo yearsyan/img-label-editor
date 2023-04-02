@@ -6,3 +6,8 @@
 ```
 npm run biuld
 ```
+
+### 运行
+```
+npm run prod
+```
