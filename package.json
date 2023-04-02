@@ -23,14 +23,16 @@
     "vite": "^4.2.1"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.0.1",
     "@emotion/css": "^11.10.6",
     "@emotion/react": "^11.10.6",
     "@fastify/cors": "^8.2.1",
     "@fastify/static": "^6.9.0",
+    "@reduxjs/toolkit": "^1.9.3",
     "antd": "^5.3.3",
     "fastify": "^4.15.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-masonry-component": "^6.3.0"
+    "react-redux": "^8.0.5"
   }
 }

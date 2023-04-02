@@ -3,6 +3,8 @@ import React from 'react'
 import { Card, List, Image, Button } from 'antd'
 import { apiBase, DataSetItem } from '../api'
 import { jsx, css } from '@emotion/react'
+import { useSelector } from 'react-redux'
+import { RootState } from '../store'
 
 const container = css`
   width: 100%;
@@ -18,13 +20,15 @@ interface ListProps {
 }
 export default function ImageList(props: ListProps) {
   const urlBase = `${apiBase()}/fetch?path=`
+  const columnNum = useSelector((state: RootState) => state.setting.listColumnNum)
 
   return (
     <List
       css={css`
-        width: 100%;
+        width: calc(100% - 30px);
+        margin: 0 15px;
       `}
-      grid={{ gutter: 16, column: 4 }}
+      grid={{ gutter: 16, column: columnNum }}
       dataSource={props.items}
       renderItem={(item, index) => (
         <List.Item

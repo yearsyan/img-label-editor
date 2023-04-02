@@ -5,6 +5,7 @@ import { jsx, css } from '@emotion/react'
 import { Input, Button, Drawer } from 'antd'
 import ImageList from './components/ImageList'
 import Editor from './components/Editor'
+import Setting from './components/setting'
 
 const container = css`
   width: 100%;
@@ -42,8 +43,10 @@ export default function App() {
           width: 100%;
           display: flex;
           justify-content: center;
+          align-items: center;
         `}
       >
+        <Setting />
         <Input
           css={css`
             width: 80%;
@@ -59,7 +62,12 @@ export default function App() {
         </Button>
       </div>
       <ImageList onClickItem={onClickItem} items={baseDataArray} />
-      <Drawer width={'40%'} placement="right" open={editingIndex >= 0} onClose={() => setEditingIndex(-1)}>
+      <Drawer
+        width={'40%'}
+        placement="right"
+        open={editingIndex >= 0}
+        onClose={() => setEditingIndex(-1)}
+      >
         {baseDataArray[editingIndex] && <Editor data={baseDataArray[editingIndex]} />}
       </Drawer>
     </div>

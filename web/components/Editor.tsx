@@ -45,7 +45,7 @@ export default function Editor(props: EditorProps) {
   const [tags, setTags] = useState<string[]>([])
   const [preTags, setPreTags] = useState<string[]>([])
   const [inputText, setInputText] = useState('')
-  const [messageApi, contextHolder] = message.useMessage();
+  const [messageApi, contextHolder] = message.useMessage()
 
   useEffect(() => {
     fetchResource(props.data.tagsUrl, true).then((text) => {
@@ -135,7 +135,15 @@ export default function Editor(props: EditorProps) {
         <Space css={[space]}>
           {preTags.length > 0 ? (
             preTags.map((tagName, index) => (
-              <Tag css={css`cursor: pointer`} key={tagName + index} closable={true} onClick={() => onPreTagClick(tagName)} onClose={() => onCloseClick(index)}>
+              <Tag
+                css={css`
+                  cursor: pointer;
+                `}
+                key={tagName + index}
+                closable={true}
+                onClick={() => onPreTagClick(tagName)}
+                onClose={() => onCloseClick(index)}
+              >
                 {tagName}
               </Tag>
             ))
@@ -144,7 +152,12 @@ export default function Editor(props: EditorProps) {
           )}
         </Space>
       </div>
-      <Input.TextArea value={inputText} onChange={e => setInputText(e.target.value)} css={[withMargin]} rows={2} />
+      <Input.TextArea
+        value={inputText}
+        onChange={(e) => setInputText(e.target.value)}
+        css={[withMargin]}
+        rows={2}
+      />
       <div
         css={css`
           display: flex;
@@ -162,8 +175,18 @@ export default function Editor(props: EditorProps) {
           添加到tag与预置tag
         </Button>
       </div>
-      <div css={[centerContainer, css`justify-content: center`, withMargin]}>
-        <Button shape='round' type='primary' onClick={onClickSet}>保存</Button>
+      <div
+        css={[
+          centerContainer,
+          css`
+            justify-content: center;
+          `,
+          withMargin
+        ]}
+      >
+        <Button shape="round" type="primary" onClick={onClickSet}>
+          保存
+        </Button>
       </div>
     </div>
   )
