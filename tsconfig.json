@@ -1,0 +1,14 @@
+{
+  "include": ["web/**/*"],
+  "compilerOptions": {
+    "module": "ES2020",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "typeRoots": ["./node_modules/@types", "./web/type"],
+    "esModuleInterop": true,
+    "jsx": "react",
+    "moduleResolution": "node"
+  }
+}
