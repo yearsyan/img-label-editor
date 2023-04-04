@@ -5,7 +5,7 @@ import { jsx, css } from '@emotion/react'
 import { Input, Button, Drawer } from 'antd'
 import ImageList from './components/ImageList'
 import Editor from './components/Editor'
-import Setting from './components/setting'
+import Setting from './components/Setting'
 
 const container = css`
   width: 100%;

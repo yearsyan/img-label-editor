@@ -6,7 +6,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "typeRoots": ["./node_modules/@types", "./web/type"],
+    "typeRoots": ["./node_modules/@types"],
     "esModuleInterop": true,
     "jsx": "react",
     "moduleResolution": "node"

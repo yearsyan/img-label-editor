@@ -4,10 +4,10 @@
 ## 使用方法
 ### 构建
 ```
-npm run biuld
+pnpm run biuld
 ```
 
 ### 运行
 ```
-npm run prod
+pnpm run prod
 ```

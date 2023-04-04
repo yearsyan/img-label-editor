@@ -1,6 +1,6 @@
 export function apiBase() {
   const host = window.location.hostname
-  if (import.meta.env.MODE === 'production') {
+  if (process.env.ENV === 'production') {
     return ''
   }
   return `${window.location.protocol}//${host}:7889`
